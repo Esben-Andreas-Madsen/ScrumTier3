@@ -130,4 +130,14 @@ public class ScrumServer extends ScrumServiceGrpc.ScrumServiceImplBase {
         responseObserver.onCompleted();
     }
 
+    @Override
+    public void assignUserStory(AssignUserStoryToBacklog request, StreamObserver<SuccessResponse> responseObserver) {
+        Backlog backlog = formatter.assignRequestToBacklog(request);
+        commands.assignUserStory(connection.getConnection(), backlog);
+
+        SuccessResponse successResponse = SuccessResponse.newBuilder().build();
+        responseObserver.onNext(successResponse);
+        responseObserver.onCompleted();
+    }
+
 }

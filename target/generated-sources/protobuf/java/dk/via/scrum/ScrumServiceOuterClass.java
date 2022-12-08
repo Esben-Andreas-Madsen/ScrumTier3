@@ -79,6 +79,11 @@ public final class ScrumServiceOuterClass {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_dk_via_scrum_AllBacklogsRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_dk_via_scrum_AssignUserStoryToBacklog_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_dk_via_scrum_AssignUserStoryToBacklog_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -106,26 +111,31 @@ public final class ScrumServiceOuterClass {
       "\t\"K\n\017BacklogResponse\022\023\n\013BacklogName\030\001 \001(" +
       "\t\022\023\n\013UserStoryId\030\002 \001(\005\022\016\n\006UserId\030\003 \001(\005\"8" +
       "\n\021NewBacklogRequest\022\023\n\013BacklogName\030\001 \001(\t" +
-      "\022\016\n\006UserId\030\002 \001(\005\"\024\n\022AllBacklogsRequest2\341" +
-      "\005\n\014ScrumService\022@\n\007getUser\022\031.dk.via.scru",
-      "m.UserRequest\032\032.dk.via.scrum.UserRespons" +
-      "e\022I\n\ncreateUser\022\034.dk.via.scrum.NewUserRe" +
-      "quest\032\035.dk.via.scrum.SuccessResponse\022J\n\013" +
-      "getAllUsers\022\035.dk.via.scrum.AllUsersReque" +
-      "st\032\032.dk.via.scrum.UserResponse0\001\022S\n\020getU" +
-      "serStoryById\022\036.dk.via.scrum.UserStoryReq" +
-      "uest\032\037.dk.via.scrum.UserStoryResponse\022S\n" +
-      "\017createUserStory\022!.dk.via.scrum.NewUserS" +
-      "toryRequest\032\035.dk.via.scrum.SuccessRespon" +
-      "se\022[\n\021getAllUserStories\022#.dk.via.scrum.A",
-      "llUserStoriesRequest\032\037.dk.via.scrum.User" +
-      "StoryResponse0\001\022K\n\ngetBacklog\022\034.dk.via.s" +
-      "crum.BacklogRequest\032\035.dk.via.scrum.Backl" +
-      "ogResponse0\001\022O\n\rcreateBacklog\022\037.dk.via.s" +
-      "crum.NewBacklogRequest\032\035.dk.via.scrum.Su" +
-      "ccessResponse\022S\n\016getAllBacklogs\022 .dk.via" +
-      ".scrum.AllBacklogsRequest\032\035.dk.via.scrum" +
-      ".BacklogResponse0\001B\002P\001b\006proto3"
+      "\022\016\n\006UserId\030\002 \001(\005\"\024\n\022AllBacklogsRequest\"T" +
+      "\n\030AssignUserStoryToBacklog\022\023\n\013BacklogNam",
+      "e\030\001 \001(\t\022\023\n\013UserStoryId\030\002 \001(\005\022\016\n\006UserId\030\003" +
+      " \001(\0052\273\006\n\014ScrumService\022@\n\007getUser\022\031.dk.vi" +
+      "a.scrum.UserRequest\032\032.dk.via.scrum.UserR" +
+      "esponse\022I\n\ncreateUser\022\034.dk.via.scrum.New" +
+      "UserRequest\032\035.dk.via.scrum.SuccessRespon" +
+      "se\022J\n\013getAllUsers\022\035.dk.via.scrum.AllUser" +
+      "sRequest\032\032.dk.via.scrum.UserResponse0\001\022S" +
+      "\n\020getUserStoryById\022\036.dk.via.scrum.UserSt" +
+      "oryRequest\032\037.dk.via.scrum.UserStoryRespo" +
+      "nse\022S\n\017createUserStory\022!.dk.via.scrum.Ne",
+      "wUserStoryRequest\032\035.dk.via.scrum.Success" +
+      "Response\022[\n\021getAllUserStories\022#.dk.via.s" +
+      "crum.AllUserStoriesRequest\032\037.dk.via.scru" +
+      "m.UserStoryResponse0\001\022K\n\ngetBacklog\022\034.dk" +
+      ".via.scrum.BacklogRequest\032\035.dk.via.scrum" +
+      ".BacklogResponse0\001\022O\n\rcreateBacklog\022\037.dk" +
+      ".via.scrum.NewBacklogRequest\032\035.dk.via.sc" +
+      "rum.SuccessResponse\022S\n\016getAllBacklogs\022 ." +
+      "dk.via.scrum.AllBacklogsRequest\032\035.dk.via" +
+      ".scrum.BacklogResponse0\001\022X\n\017assignUserSt",
+      "ory\022&.dk.via.scrum.AssignUserStoryToBack" +
+      "log\032\035.dk.via.scrum.SuccessResponseB\002P\001b\006" +
+      "proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -217,6 +227,12 @@ public final class ScrumServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_dk_via_scrum_AllBacklogsRequest_descriptor,
         new java.lang.String[] { });
+    internal_static_dk_via_scrum_AssignUserStoryToBacklog_descriptor =
+      getDescriptor().getMessageTypes().get(13);
+    internal_static_dk_via_scrum_AssignUserStoryToBacklog_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_dk_via_scrum_AssignUserStoryToBacklog_descriptor,
+        new java.lang.String[] { "BacklogName", "UserStoryId", "UserId", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

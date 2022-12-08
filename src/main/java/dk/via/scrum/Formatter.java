@@ -68,6 +68,11 @@ public class Formatter implements FormatterInterface {
         return new Backlog(request.getBacklogName(), request.getUserId());
     }
 
+    @Override
+    public Backlog assignRequestToBacklog(AssignUserStoryToBacklog request) {
+        return new Backlog(request.getBacklogName(), request.getUserStoryId(), request.getUserId());
+    }
+
 }
 
 

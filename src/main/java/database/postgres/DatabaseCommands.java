@@ -238,4 +238,25 @@ public class DatabaseCommands implements DatabaseCommandsInterface {
         return backlogs;
     }
 
+    public void assignUserStory(Connection connection, Backlog backlog) {
+        String sql = "insert into scrum.\"backlog\"(backlogname,userstoryid,userid) values (?,?,?)";
+        PreparedStatement preparedStatement;
+
+
+        try {
+            preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setString(1, backlog.getBacklogName());
+            preparedStatement.setInt(2, backlog.getUserStoryId());
+            preparedStatement.setInt(3, backlog.getUserId());
+            preparedStatement.executeUpdate();
+            System.out.println("UserStory assigned");
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
+    }
+
+
+
+
 }

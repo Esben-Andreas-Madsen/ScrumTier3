@@ -12,7 +12,9 @@ dk\via\scrum\BacklogResponse.class
 dk\via\scrum\RunServer.class
 dk\via\scrum\ScrumServiceGrpc$ScrumServiceDescriptorSupplier.class
 dk\via\scrum\AllUsersRequest$Builder.class
+dk\via\scrum\AssignUserStoryToBacklogOrBuilder.class
 dk\via\scrum\NewUserRequest$1.class
+dk\via\scrum\AssignUserStoryToBacklog$1.class
 dk\via\scrum\UserStoryRequestOrBuilder.class
 dk\via\scrum\BacklogRequest$1.class
 dk\via\scrum\ScrumServiceGrpc$ScrumServiceImplBase.class
@@ -37,6 +39,7 @@ dk\via\scrum\UserRequest.class
 dk\via\scrum\UserStoryResponseOrBuilder.class
 shared\Backlog.class
 dk\via\scrum\NewUserRequest$Builder.class
+dk\via\scrum\AssignUserStoryToBacklog.class
 dk\via\scrum\ScrumServiceOuterClass$1.class
 dk\via\scrum\SuccessResponseOrBuilder.class
 dk\via\scrum\SuccessResponse$1.class
@@ -66,6 +69,7 @@ dk\via\scrum\AllBacklogsRequest$Builder.class
 dk\via\scrum\NewUserRequestOrBuilder.class
 dk\via\scrum\NewBacklogRequestOrBuilder.class
 dk\via\scrum\UserRequest$Builder.class
+dk\via\scrum\AssignUserStoryToBacklog$Builder.class
 dk\via\scrum\BacklogResponseOrBuilder.class
 dk\via\scrum\NewUserStoryRequestOrBuilder.class
 dk\via\scrum\UserStoryResponse.class

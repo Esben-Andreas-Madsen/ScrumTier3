@@ -135,6 +135,18 @@ public final class ScrumServiceGrpc {
           .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
               dk.via.scrum.BacklogResponse.getDefaultInstance()))
           .build();
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  public static final io.grpc.MethodDescriptor<dk.via.scrum.AssignUserStoryToBacklog,
+      dk.via.scrum.SuccessResponse> METHOD_ASSIGN_USER_STORY =
+      io.grpc.MethodDescriptor.<dk.via.scrum.AssignUserStoryToBacklog, dk.via.scrum.SuccessResponse>newBuilder()
+          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+          .setFullMethodName(generateFullMethodName(
+              "dk.via.scrum.ScrumService", "assignUserStory"))
+          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              dk.via.scrum.AssignUserStoryToBacklog.getDefaultInstance()))
+          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              dk.via.scrum.SuccessResponse.getDefaultInstance()))
+          .build();
 
   /**
    * Creates a new async stub that supports all call types for the service
@@ -226,6 +238,13 @@ public final class ScrumServiceGrpc {
       asyncUnimplementedUnaryCall(METHOD_GET_ALL_BACKLOGS, responseObserver);
     }
 
+    /**
+     */
+    public void assignUserStory(dk.via.scrum.AssignUserStoryToBacklog request,
+        io.grpc.stub.StreamObserver<dk.via.scrum.SuccessResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(METHOD_ASSIGN_USER_STORY, responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -291,6 +310,13 @@ public final class ScrumServiceGrpc {
                 dk.via.scrum.AllBacklogsRequest,
                 dk.via.scrum.BacklogResponse>(
                   this, METHODID_GET_ALL_BACKLOGS)))
+          .addMethod(
+            METHOD_ASSIGN_USER_STORY,
+            asyncUnaryCall(
+              new MethodHandlers<
+                dk.via.scrum.AssignUserStoryToBacklog,
+                dk.via.scrum.SuccessResponse>(
+                  this, METHODID_ASSIGN_USER_STORY)))
           .build();
     }
   }
@@ -384,6 +410,14 @@ public final class ScrumServiceGrpc {
       asyncServerStreamingCall(
           getChannel().newCall(METHOD_GET_ALL_BACKLOGS, getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void assignUserStory(dk.via.scrum.AssignUserStoryToBacklog request,
+        io.grpc.stub.StreamObserver<dk.via.scrum.SuccessResponse> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(METHOD_ASSIGN_USER_STORY, getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -470,6 +504,13 @@ public final class ScrumServiceGrpc {
       return blockingServerStreamingCall(
           getChannel(), METHOD_GET_ALL_BACKLOGS, getCallOptions(), request);
     }
+
+    /**
+     */
+    public dk.via.scrum.SuccessResponse assignUserStory(dk.via.scrum.AssignUserStoryToBacklog request) {
+      return blockingUnaryCall(
+          getChannel(), METHOD_ASSIGN_USER_STORY, getCallOptions(), request);
+    }
   }
 
   /**
@@ -529,6 +570,14 @@ public final class ScrumServiceGrpc {
       return futureUnaryCall(
           getChannel().newCall(METHOD_CREATE_BACKLOG, getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<dk.via.scrum.SuccessResponse> assignUserStory(
+        dk.via.scrum.AssignUserStoryToBacklog request) {
+      return futureUnaryCall(
+          getChannel().newCall(METHOD_ASSIGN_USER_STORY, getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GET_USER = 0;
@@ -540,6 +589,7 @@ public final class ScrumServiceGrpc {
   private static final int METHODID_GET_BACKLOG = 6;
   private static final int METHODID_CREATE_BACKLOG = 7;
   private static final int METHODID_GET_ALL_BACKLOGS = 8;
+  private static final int METHODID_ASSIGN_USER_STORY = 9;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -594,6 +644,10 @@ public final class ScrumServiceGrpc {
           serviceImpl.getAllBacklogs((dk.via.scrum.AllBacklogsRequest) request,
               (io.grpc.stub.StreamObserver<dk.via.scrum.BacklogResponse>) responseObserver);
           break;
+        case METHODID_ASSIGN_USER_STORY:
+          serviceImpl.assignUserStory((dk.via.scrum.AssignUserStoryToBacklog) request,
+              (io.grpc.stub.StreamObserver<dk.via.scrum.SuccessResponse>) responseObserver);
+          break;
         default:
           throw new AssertionError();
       }
@@ -636,6 +690,7 @@ public final class ScrumServiceGrpc {
               .addMethod(METHOD_GET_BACKLOG)
               .addMethod(METHOD_CREATE_BACKLOG)
               .addMethod(METHOD_GET_ALL_BACKLOGS)
+              .addMethod(METHOD_ASSIGN_USER_STORY)
               .build();
         }
       }

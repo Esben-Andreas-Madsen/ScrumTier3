@@ -14,4 +14,6 @@ public interface FormatterInterface {
     List<BacklogResponse> backlogsToResponse(List<Backlog> backlogs);
     Backlog requestToBacklog(NewBacklogRequest request);
 
+    Backlog assignRequestToBacklog(AssignUserStoryToBacklog request);
+
 }
