@@ -23,33 +23,18 @@ public class UserStory {
         return UserStoryId;
     }
 
-    public void setUserStoryId(int userStoryId) {
-        UserStoryId = userStoryId;
-    }
-
     public int getUserId() {
         return UserId;
-    }
-
-    public void setUserId(int userId) {
-        UserId = userId;
     }
 
     public String getTitle() {
         return Title;
     }
 
-    public void setTitle(String title) {
-        Title = title;
-    }
-
     public String getDescription() {
         return Description;
     }
 
-    public void setDescription(String description) {
-        Description = description;
-    }
 
     @Override
     public String toString() {

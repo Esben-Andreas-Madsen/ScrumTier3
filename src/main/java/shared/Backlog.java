@@ -21,24 +21,12 @@ public class Backlog {
         return BacklogName;
     }
 
-    public void setBacklogName(String backlogName) {
-        BacklogName = backlogName;
-    }
-
     public int getUserStoryId() {
         return UserStoryId;
     }
 
-    public void setUserStoryId(int userStoryId) {
-        UserStoryId = userStoryId;
-    }
-
     public int getUserId() {
         return UserId;
-    }
-
-    public void setUserId(int userId) {
-        UserId = userId;
     }
 
     @Override
